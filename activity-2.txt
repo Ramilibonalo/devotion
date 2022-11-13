@@ -1,0 +1,215 @@
+package hardcoding;
+import java.util.Scanner;
+
+public class Main{
+
+  public static void main(String[]args) {
+  
+  Scanner console = new Scanner(System.in);
+  
+  
+  String orderCart = "Your orders are the following: \n";
+  int respondToOrder, orderCategory;
+  float totalPayment = 0, customerCash;
+  
+  System.out.println("==========WELCOME TO MANG RAMZ TAGAYAN! ========");
+  System.out.println("| DO YOU WANT TO ORDER? [1-YES, 2-NO]            |");
+  System.out.println("| Enter the number for your choice below         |");
+  System.out.println("==================================================");
+  System.out.print  ("Choice:");
+  respondToOrder = console.nextInt(); 
+  
+  do {
+
+  if (respondToOrder == 1) {
+  
+	  System.out.println("==========WELCOME TO MANG RAMZ TAGAYAN! ========");
+	  System.out.println("|WHAT TO ORDER? [1-FOOD, 2 - BEVERAGES , 3-SNACKS|");
+	  System.out.println("| Enter the number for your choice below         |");
+	  System.out.println("==================================================");
+	  System.out.print  ("Choice:");
+	  orderCategory = console.nextInt();
+	  
+	  if(orderCategory == 1) {
+	    System.out.println("==========WELCOME TO MANG  RAMZ TAGAYAN! ========");
+	    System.out.println("|***************ORDER FOOD***********************|");
+	    System.out.println("| [1] Chicken Wings + Rice : P250.00   |");
+	    System.out.println("| [2] Pork Fat + Sisig          : P180.00   |");
+	    System.out.println("| [3] Adobong Baboy + Unli-Rice       : P180.00   |");
+	    System.out.println("| Enter the number for your choice below         |");
+	    System.out.println("==================================================");
+	    System.out.print  ("Choice:");
+	    float Chicken = 250 , Pork = 180,AdobongBaboy = 180;
+	    int orderChoice = console.nextInt();
+	    
+	      switch (orderChoice) {
+		case 1: 
+		  System.out.println("Chicken Wings + Rice: P250.00 added to cart");
+		  totalPayment+= Chicken;
+		  String order1 = "Chicken Wings + Rice: P250.00 \n";
+		  orderCart+=order1;
+		  
+		break;
+		
+		case 2: 
+		  System.out.println(" Pork Fat + Sisig   : P180.00  added to cart");
+		  totalPayment+= Pork;
+		  String order2 = " Pork Fat + Sisig          : P180.00  \n";
+		  orderCart+=order2;
+		break;
+		
+		case 3: 
+		  System.out.println(" Adobong Baboy + Unli-Rice      : P180.00 added to cart");
+		  totalPayment+=adobongbaboy;
+		  String order3 = "Adobong Baboy + Unli-Rice      : P180.00 \n";
+		  orderCart+=order3;
+		  
+		break;
+	      
+	       default:
+		 System.out.println("Enter valid entry only base on the choices above!");
+		 
+	       break;  
+	      
+	      }
+	    
+
+	  } else if(orderCategory == 2) {
+	    System.out.println("==========WELCOME TO MANG RAMZ TAGAYAN! ========");
+	    System.out.println("|***************ORDER BEVERAGE********************|");
+	    System.out.println("| [1] 1-Bucket of Emperador light : P310.00    |");
+	    System.out.println("| [2] 1-Tower of The Bar Pink Gin : P280.00    |");
+	    System.out.println("| [3] Berry Bros & Rudd Pink  Special for Family Members: P180.00    |");
+	    System.out.println("| Enter the number for your choice below          |");
+	    System.out.println("==================================================");
+	    System.out.print  ("Choice:");
+	    
+	    float emperador = 310 , tbpg = 280,bbrp = 180;
+	    int orderChoice = console.nextInt();
+	    
+	      switch (orderChoice) {
+		case 1: 
+		  System.out.println("1-Bucket of Emperador light : P310.00 added to cart");
+		  totalPayment+=emperador;
+		  String order1 = "1-Bucket of Emperador light : P310.00 \n";
+		  orderCart+=order1;
+		  
+		  
+		  
+		  
+		break;
+		
+		case 2: 
+		  System.out.println("1-Tower of The Bar Pink Gin : P280.00 added to cart");
+		  totalPayment+=tbpg;
+		  String order2 = "1-Tower of The Bar Pink Gin : P280.00 \n";
+		  orderCart+=order2;
+		  
+		  
+		  
+		break;
+		
+		case 3: 
+		  System.out.println("Berry Bros & Rudd Pink  Special for Family Members: P180.00  added to cart");
+		  totalPayment+=bbrp;
+		  String order3 = "Berry Bros & Rudd Pink  Special for Family Members: P180.00 \n";
+		  orderCart+=order3;
+		  
+		  
+		break;
+	      
+	       default:
+		 System.out.println("Enter valid entry only base on the choices above!");
+	       break;  
+	      
+	      }
+	    
+	    
+	    }
+	    
+	    else if(orderCategory == 3) {
+	    System.out.println("==========WELCOME TO MANG RAMZ TAGAYAN! ========");
+	    System.out.println("|*************ORDER SNACKS / PULUTAN*************|");
+	    System.out.println("| [1] Tahong Sisig       : P150.00    |");
+	    System.out.println("| [2] Pancit Miki/Bihon          : P180.00    |");
+	    System.out.println("| [3] Crispy Pata Special     : P120.00    |");
+	    System.out.println("| Enter the number for your choice below         |");
+	    System.out.println("==================================================");
+	    System.out.print  ("Choice:");
+	    
+	    float TahongSisig = 150 ,  Pancit Miki/Bihon = 180, CrispyPata= 120;
+	    int orderChoice = console.nextInt();
+	    
+	      switch (orderChoice) {
+		case 1: 
+		  System.out.println("Tahong Sisig       : P150.00 added to cart");
+		  totalPayment+=TahongSisig;
+		  String order1 = "Tahong Sisig      : P150.00 \n";
+		  orderCart+=order1;
+		break;
+		
+		case 2: 
+		  System.out.println(" Pancit Miki/Bihon        : P180.00 added to cart");
+		  totalPayment+= PancitMiki/Bihon ;
+		  String order2 = " Pancit Miki/Bihon            : P180.00 \n";
+		  orderCart+=order2;
+		break;
+		
+		case 3: 
+		  System.out.println("Crispy Pata Special     : P120.00  added to cart");
+		  totalPayment+=CrispyPata;
+		   String order3 = "Crispy Pata Special    : P120.00 \n";
+		   orderCart+=order3;
+		  
+		  
+		break;
+	      
+	       default:
+		 System.out.println("Enter valid entry only base on the choices above!");
+		 
+	       break;  
+	      
+	      }
+	    
+	    }
+   }
+   
+   else {
+   
+   System.out.println("Okay! Have a nice day!~ ??");
+   System.exit(0);
+   
+   
+   }
+   
+   
+   
+   
+   System.out.println("Order again?");
+   System.out.println("[1] - Yes");
+   System.out.println("[2] - No");
+   respondToOrder = console.nextInt();
+   
+    
+  } while(respondToOrder == 1);
+  
+    System.out.println("Amount to pay: "+totalPayment);
+    System.out.print("Enter cash payment: ");
+    customerCash = console.nextFloat();
+  
+    System.out.println("==========R E C E I P T ========");
+    System.out.println(orderCart);
+     System.out.printf("TOTAL: %.2f\n",totalPayment);
+    System.out.println("Change: " + (customerCash - totalPayment));
+    System.out.println("================================");
+     System.out.println("Thank you come again!");
+  
+  
+  
+  
+  
+
+  }
+
+
+}
